@@ -34,7 +34,7 @@ export default function (request) {
             }
         }
 
-        xhr.open(request.method, request.getUrl(), true);
+        xhr.open(request.method, request.getUrl(), !request.sync);
 
         if (request.timeout) {
             xhr.timeout = request.timeout;
